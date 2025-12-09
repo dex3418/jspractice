@@ -95,28 +95,9 @@
 
 // pattern question 8 inverted pyramid pattern
 
-// const readline = require('node:readline');
-// const { stdin: input, stdout: output } = require('node:process');
-
-// const rl = readline.createInterface({input, output });
-// rl.question("Number: ", (n) => {
-
-//     console.log(`Hello, ${n}!`);
-//     rl.close();
-// });
-
 // ----------------------------------------------------------------------------------------
 
 // patten question 9 Floyd's triangle
-
-// const readlline = require('node:readline');
-// const {stdin: input, stdout: output} = require('node:process');
-
-// const rl = readline.createInterface({ input, output });
-// rl.question('Number: ',(n) => {
-//     console.log(`hello, ${n}`);
-//     rl.close();
-// });
 
 // ----------------------------------------------------------------------------------------
 
@@ -143,28 +124,3 @@
 // pattern question 15 numeric palindromic pattern
 
 // ----------------------------------------------------------------------------------------
-// let n = 5;
-// for(let i = n; i >= 0; i--){
-//     row = ""
-//     for(let j = 1; j <= i; j++){
-//         row = row + "*";
-//     }
-//     console.log(row)
-// }
-
-// const readline = require('node:readline');
-// const {stdin:input, stdout:output} = require('node:process');
-
-// const rl = readline.createInterface({input, output});
-// rl.question('number: ', (n) => (
-    
-//     rl.close();
-// ));
-
-// for(let i = 1; i <= n; i++){
-//     pat = "";
-//     for(let j = 1; j <= i; j++){
-
-
-//     
-// }
