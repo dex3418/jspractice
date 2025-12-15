@@ -180,4 +180,30 @@
 
 // ---------------------------------------------------------------------------------------------------------
 
-// nested loops question 10 
+// nested loops question 10 from 1 to 200 whose digits sum to a prime number
+
+// let start = 1;
+// let end = 200;
+
+// while (start <= end){
+//     let num = start;
+//     let sum = 0;
+//     while (num > 0){
+//         let d = num % 10;
+//         sum = sum + d;
+//         num = Math.floor(num / 10);
+//     }
+//     let i = 2;
+//     let count = 0;
+//     while (i <= sum){
+//         if (sum % i == 0){
+//             count++;
+//         }
+//         i++;
+//     }
+//     if (count == 1){
+//         console.log(start);
+//     }
+//     start++;
+// }
+// ---------------------------------------------------------------------------------------------------------
