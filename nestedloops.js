@@ -21,7 +21,7 @@
 // nested looops question 2 between 1 and 500 print perfect numbers
 
 // let start = 1;
-// let end = 500;
+// let end = 300;
 
 // while (start <= end){
 //     let sum = 0;
@@ -207,3 +207,115 @@
 //     start++;
 // }
 // ---------------------------------------------------------------------------------------------------------
+
+// loop test no.1 E pattern;
+// let n = 5;
+
+// for(let r = 0; r < n; r++){
+//     pat = " ";
+//     for(let c = 0; c < n; c++){
+//         if(r == 0||c == 0|| r == n-1|| r == Math.floor(n / 2)){
+//             pat = pat + "* ";
+//         }else{
+//             pat = pat + " ";
+//         }
+//     }console.log(pat);
+// }
+
+//----------------------------------------------------------------------------------------------------------
+
+// let n = 5;
+// let char = "A ";
+// for(let i = 0; i < n; i++){
+//     pat = " ";
+//     for(let j = 0; j <= i; j++){
+//         pat = pat + char + " ";
+//         char++;
+//     }console.log(pat);
+// }
+//----------------------------------------------------------------------------------------------------------
+// let start = 1;
+// let end = 300;
+
+// while (start <= end){
+//     let sum = 0;
+//     let i = 1;
+//     while (i < start){
+//         if (start % i == 0){
+//             sum = sum + i;               done wrong question.
+//         }
+//         i++;
+//     }
+//     if (sum == start){
+//         console.log(start);
+//     }
+//     start++;
+// }
+// ---------------------------------------------------------------------------------------------------------
+// let n = 678;
+
+
+// while(n >10){
+//     let sum = 0;
+//     while(n>0){
+//      let d = n % 10;
+//      sum = sum + d;
+//      n = Math.floor(n / 10);
+//     //  console.log(sum)
+//     }
+//  n=sum;
+// }
+// console.log(n)
+//-----------------------------------------------------------------------------------------------------------------------------------------------------
+// let start = 10;
+// let end = 30;
+
+// for(let i = 1; i <= end; i++){
+//     square = i ** 2;
+//     if(start <= square){
+//         if(square <= end){
+//             console.log(square);        
+//         }
+//     }
+// }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Harshad Number
+// let n = 18;
+// let num = n;
+// let d;
+// let sum = 0;
+
+// while(num > 0){
+//     d = num % 10;
+//     sum = sum + d;
+//     num = Math.floor(num / 10);
+
+// }   
+// if(n % sum == 0){
+//     console.log("Harshad Number",n);
+// }else{
+//     console.log("Not Harshad Number", n);
+// }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Harshad Numbers between a range
+// function harshadNumber(start, end){
+//     let sum = 0;
+//     let d;
+
+//     while(start <= end){
+//         let num = start;
+//         while(num > 0){
+//             d = num % 10;
+//             sum = sum + d;
+//             num = Math.floor(num / 10);
+//         }if(sum % start == 0){
+//             console.log("Harshad Number " , start);
+//             start++;
+//         }else{
+//             console.log("Not Harshad Number ", start);
+//             start++;
+//         }
+//     }
+// }
+// harshadNumber(1,20)
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
