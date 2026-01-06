@@ -55,38 +55,38 @@
 // (Array No 5)
 // Given an array [1, 2, 3, 4, 5, 6, 7], take a number from the user and check whether it exists in the array or not.
 // const prompt = require("prompt-sync")();
-// function checkNumber(L , size){
-//     let check = prompt("Enter number to check: ");
+// const prompt = require("prompt-sync")();
+// check = prompt("Enter number to check: ");
+// function checkNumber(L , check){
 //     let count = 0;
-//     for(let i = 0; i < size; i++){
+//     for(let i = 0; i < L.length; i++){
 //         if(check == L[i]){
 //             count += 1;
 //         }       
-//     }if(count > 0){
-//         result = "Yes";
-//     }else{ 
-//         result = "No"; 
-//     }
+//     }result = count > 0 ? "Yes" : "No";
 //     console.log(result)
 //     return result;
 // }
-// checkNumber([1, 2, 3, 4, 5, 6, 7], 7)
+// checkNumber([1, 2, 3, 4, 5, 6, 7], check)
 
 //---------------------------------------------------------------------------------------------------------------------
 // (Array No 6)
 // Write a program to create an array of 7 numbers from the user and print "Yes" if the array consists of consecutive numbers, otherwise print "No".
 // const prompt = require("prompt-sync")();
+// size = prompt("Size: ");
 // function sumAndAverage(size, nums){
+//     let count = 0;
 //     for(let i = 0; i < size; i++){
-//         let num = prompt("Number: ")
-//         nums.push(Number(num));
-//     }console.log(nums);                                                          incomplete
-//     for(let i = 0; i < size; i++){
-//         let sum = 0;
-//         sum = sum + nums[i];
-//     }
+//         n = prompt("Number: ");
+//         nums.push(Number(n));
+//     }for(let i = 0; i < nums.length; i++){
+//         if(nums[i + 1] - nums[i] == 1){
+//             count += 1;
+//         }
+//     }result = size - 1 == count ? "Yes" : "No";
+//     console.log(result);
 // }
-// sumAndAverage(5 ,[])
+// sumAndAverage(size ,[])
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 7)
@@ -137,6 +137,22 @@
 
 // (Array No 10 )
 // Make a flowchart to print duplicate elements in an array. Create the array based on the size given by the user.
+// const prompt = require("prompt-sync")();
+// size = prompt("Size: ");
+// function duplicateArray(size, nums){
+//     let copy = [];
+//     for(let i = 0; i < size; i++){
+//         num = Number(prompt("Number: "));
+//         nums.push(num);
+//     }for(let i = 0; i < size; i++){
+//         for(let j = i + 1; j < size; j++){
+//             if(nums[i] == nums[j]){
+//                 copy.push(nums[i])
+//             }
+//         }
+//     }console.log(copy.join(" "));
+// }
+// duplicateArray(size, []);
 
 //---------------------------------------------------------------------------------------------------------------------
 
@@ -265,54 +281,252 @@
 
 // (Array No  18)
 // Write a program to create an array of 10 numbers from the user and count the number of odd and even numbers.
+// const prompt = require("prompt-sync")();
+// function mannualEvenAndOdd(nums, size){
+//     let countEven = 0;
+//     let countOdd = 0;
+//     for(let i = 0; i < size; i++){
+//         n = prompt("Number: ");
+//         nums.push(n);
+//     }for(let i = 0; i < size; i++){
+//         if(nums[i] % 2 != 0){
+//             countOdd += 1;
+//         }else{
+//             countEven += 1;
+//         };
+//     }console.log(`Count Even: ${countEven}, Count Odd: ${countOdd}.`)
+
+// }
+// mannualEvenAndOdd([], 10)
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No  19)
 // Write a program to create an array of 10 numbers from the user and find the sum of elements at even positions and odd positions separately.
+// const prompt = require("prompt-sync")();
+// function mannualSumEvenAndOdd(nums, size){
+//     let countEven = 0;
+//     let countOdd = 0;
+//     let sumEven = 0;
+//     let sumOdd = 0;
+//     for(let i = 0; i < size; i++){
+//         n = prompt("Number: ");
+//         nums.push(Number(n));
+//     }for(let i = 0; i < size; i++){
+//         if( i % 2 != 0){
+//             countOdd += 1;
+//             sumOdd = sumOdd + nums[i];
+//         }else{
+//             countEven += 1;
+//             sumEven = sumEven + nums[i];
+//         };
+//     }console.log(`Count Even: ${countEven}, Sum of Even: ${sumEven}, Count Odd: ${countOdd}, Sum of Odd: ${sumOdd}.`)
+
+// }
+// mannualSumEvenAndOdd([], 10)
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 20)
 // Write a program to create an array of n items where n is input from the user. Then input n names and store them in the array.
+// const prompt = require("prompt-sync")();
+// n = prompt("Size: ")
+// function inputNames(n, names){
+//     for(let i = 0; i < n; i++){
+//         let name = prompt("Name: ")
+//         names.push(name)
+//     }console.log(names);
+// }
+// inputNames(n, []);
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 21)
 // In the flowchart of the above question, print the names entered by the user in reverse order.
+                                                                                                    // Method 1
+// const prompt = require("prompt-sync")();
+// n = prompt("Size: ")
+// function inputRevNames(n, names, revNames){
+//     for(let i = 0; i < n; i++){
+//         let name = prompt("Name: ")
+//         names.push(name)
+//     }
+//     for(let i = n - 1; i >= 0; i--){
+//         revNames.push(names[i])
+//     }console.log(revNames);
+// }
+// inputRevNames(n, [], []);
+                                                                                                    // Method 2
+// const prompt = require("prompt-sync")();
+// size = Number(prompt("Size: "));
+// function revNames(names, size){
+//     for(let i = 0; i < size; i++){
+//         let name = prompt("Names: ");
+//         names.push(name);
+//     }console.log(names.reverse());
+// }
+// revNames([], size);
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 22)
 // Write a program to show how to rearrange the elements in an array so that they appear in reverse order.
+// const prompt = require("prompt-sync")();
+// n = prompt("Size: ")
+// function inputRevNames(n, names, revNames){
+//     for(let i = 0; i < n; i++){
+//         let name = prompt("Name: ")
+//         names.push(name)
+//     }
+//     for(let i = n - 1; i >= 0; i--){
+//         revNames.push(names[i])
+//     }console.log(revNames);
+// }
+// inputRevNames(n, [], []);
+
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 23)
 // Write a program to input n numbers from the user, store them in an array, and determine the maximum number.
+// const prompt = require("prompt-sync")();
+// size = Number(prompt("Size: "));
+// function maxNumber(size, nums){
+//     for(let i = 0; i < size; i++){
+//         n = Number(prompt("Number: "));
+//         nums.push(n);
+//     }for(let i = 0; i < size - 1; i++){
+//         for(let j = i + 1; j <= size; j++ ){
+//             if(nums[i] > nums[j]){
+//                 let temp = nums[i];
+//                 nums[i] = nums[j];
+//                 nums[j] = temp;
+//             }
+//         }
+//     }let max = nums[size - 1];
+//     console.log(max);
+// }
+// maxNumber(size, []);
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 24)
 // Write a program to store the first 100 natural numbers in an array and display them in reverse order.
+// const dell = require("prompt-sync")();
+// n = Number(dell("Number: "));
+// function naturalNum(n, nums){
+//     for(let i = 1; i <= n; i++){
+//         nums.push(i);
+//     }console.log(nums.reverse())
+// }
+// naturalNum(n, []);
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 25)
 // In a hospital, the weights of newborn babies are recorded monthly. Store the weights in an array and find the mean, maximum, and minimum weight. Take n as input from the user.
+// const prompt = require("prompt-sync")();
+// size = Number(prompt("Size: "));
+// function monthlyWeight(size, nums){
+//     let sum = 0;
+//     for(let i = 0; i < size; i++){
+//         n = Number(prompt("Weight: "));
+//         nums.push(n);
+//         sum = sum + n;
+//     }for(let i = 0; i < size - 1; i++){
+//         for(let j = i + 1; j <= size; j++ ){
+//             if(nums[i] > nums[j]){
+//                 let temp = nums[i];
+//                 nums[i] = nums[j];
+//                 nums[j] = temp;
+//             }
+//         }
+//     }let max = nums[size - 1];
+//     let min = nums[0];
+//     let mean = sum / size;
+    
+//     console.log(`Max weight ${max}, Min weight ${min}, Mean weight ${mean}.`);
+// }
+// monthlyWeight(size, []);
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 26)
 // In a city, daily maximum and minimum temperatures are recorded for a month. Draw a flowchart to find mean maximum temperature, mean minimum temperature, highest maximum temperature, lowest minimum temperature, hottest day, and coldest day.
+// const prompt = require('prompt-sync')();
+// size = Number(prompt('Recorded Months: '))
+// function monthlyTemperature(temperature, size){
+//     for(let i = 0; i < size; i++){
+//         minTemp = Number(prompt('Minimum Temperature: '));
+//         maxTemp = Number(prompt('Maximum Temperature: '));
+//         temperature.push(minTemp, maxTemp)
+//     }for(let i = 0; i < size - 1; i++){
+//         for(let j = i + 1; j <= size; j++ ){                                        not done
+//             if(temperature[i] > temperature[j]){
+//                 let temp = temperature[i];
+//                 temperature[i] = temperature[j];
+//                 temperature[j] = temp;
+//             }
+//         }
+//     }console.log(temperature);
+    
+// }
+// monthlyTemperature([], size);
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No27)
 // Convert a given Roman numeral into its decimal equivalent.
+// const romanValues = {
+//   'M': 1000, 'CM': 900, 'D': 500, 'CD': 400,
+//   'C': 100, 'XC': 90, 'L': 50, 'XL': 40,
+//   'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1
+// };
+// const values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+// const symbols = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+// const prompt = require('prompt-sync')();
+// roman = Number(prompt('Number: '))
+// function romanToDecimal(roman){
+//     let rom = roman
+//     let romanNumber = " "
+//     for(let i = 0; i < values.length; i++){
+//         while(rom > 0 ){
+//             if(rom <= values[i]){
+//                 rom = rom - values[i];
+//                 romanNumber = romanNumber + symbols[i];
+//                 console.log(romanNumber);
+//             }
+//         }
+//     }console.log(romanNumber);
+    
+// }
+// romanToDecimal(roman)
+
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 28)
 // Convert a decimal number into its Roman numeral equivalent.
+// const romanMap = { 1000: "M", 900: "CM", 500: "D",
+//     400: "CD", 100: "C", 90: "XC", 50: "L", 40: "XL",
+//     10: "X", 9: "IX", 5: "V", 4: "IV", 1: "I" 
+// };
+// const values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+// const symbols = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+
+
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 29)
 // Take an array from the user as input and reverse it before printing.
+// const prompt = require("prompt-sync")();
+// n = prompt("Size: ")
+// function inputRevNames(n, names, revNames){
+//     for(let i = 0; i < n; i++){
+//         let name = prompt("Name: ")
+//         names.push(name)
+//     }
+//     for(let i = n - 1; i >= 0; i--){
+//         revNames.push(names[i])
+//     }console.log(revNames);
+// }
+// inputRevNames(n, [], []);
+
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 30)
 // Take an array from the user as input and print the mean, median, and mode of the array.
+
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 31)
@@ -325,6 +539,7 @@
 
 // (Array No 33)
 // Take two sorted arrays from the user and merge them into a single sorted array.
+
 //---------------------------------------------------------------------------------------------------------------------
 
 // (Array No 34)
